@@ -46,7 +46,7 @@ class cluster_kmeans(object):
                         f.write('-'*20)
                         f.write('\n')
                     count += 1
-            print('\r当前文本保存进度：{:.2f}%'.format(count / (len(result))))  # 文本保存进度条
+            print('\r当前文本保存进度：{:.2f}%'.format(100*count / (len(result))))  # 文本保存进度条
 
     def cluster(self, n):  # n代表取前几个周围的向量。函数功能：获取聚类中心n个词
         result_list = []
@@ -69,7 +69,7 @@ class cluster_kmeans(object):
                 name_list.append(reflact_dict[i])
 
                 count += 1
-                print('\r当前进度：{:.2f}%'.format(count/(n * len(self.vec))), end='')   # 结果列表加载进度条
+                print('\r当前进度：{:.2f}%'.format(10*count/(n * len(self.vec))), end='')   # 结果列表加载进度条
 
             result_list.append(name_list)
 
